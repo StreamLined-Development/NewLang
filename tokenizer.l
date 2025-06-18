@@ -32,6 +32,9 @@ ID       [a-zA-Z_][a-zA-Z0-9_]*
 "var"           { printf("VAR_KW\n"); }
 "const"         { printf("CONST_KW\n"); }
 "void"          { printf("VOID_KW\n"); }
+"not"           { printf("NOT_KW\n"); }
+"pre_condition" { printf("PRE_CONDITION_KW\n"); }
+"post_condition" { printf("POST_CONDITION_KW\n"); }
 "typealias"     { printf("TYPEALIAS_KW\n"); }
 "if"            { printf("IF_KW\n"); }
 "else"          { printf("ELSE_KW\n"); }
