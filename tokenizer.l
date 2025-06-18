@@ -46,7 +46,7 @@ ID       [a-zA-Z_][a-zA-Z0-9_]*
 "then"          { printf("THEN_KW\n"); }
 "for"           { printf("FOR_KW\n"); }
 "in"            { printf("IN_KW\n"); }
-"address"       { printf("ADDRESS_KW\n"); }  /* New address keyword */
+"address"       { printf("ADDRESS_KW\n"); }
 
 "of"            { printf("OF_KW\n"); }
 "comptime"      { printf("COMPTIME_KW\n"); }
@@ -55,6 +55,7 @@ ID       [a-zA-Z_][a-zA-Z0-9_]*
 "struct"        { printf("STRUCT_KW\n"); }
 "union"         { printf("UNION_KW\n"); }
 "enum"          { printf("ENUM_KW\n"); }
+
 "file_scope"    { printf("FILE_SCOPE_KW\n"); }
 "dir_scope"     { printf("DIR_SCOPE_KW\n"); }
 "pack_scope"    { printf("PACK_SCOPE_KW\n"); }
@@ -67,6 +68,12 @@ ID       [a-zA-Z_][a-zA-Z0-9_]*
 "char64"        { printf("CHAR64_TYPE\n"); }
 "char128"       { printf("CHAR128_TYPE\n"); }
 "char256"       { printf("CHAR256_TYPE\n"); }
+"str8"          { printf("STR8_TYPE\n"); }
+"str16"         { printf("STR16_TYPE\n"); }
+"str32"         { printf("STR32_TYPE\n"); }
+"str64"         { printf("STR64_TYPE\n"); }
+"str128"        { printf("STR128_TYPE\n"); }
+"str256"        { printf("STR256_TYPE\n"); }
 
 "int8"          { printf("INT8_TYPE\n"); }
 "int16"         { printf("INT16_TYPE\n"); }
@@ -78,6 +85,7 @@ ID       [a-zA-Z_][a-zA-Z0-9_]*
 "uint32"        { printf("UINT32_TYPE\n"); }
 "uint64"        { printf("UINT64_TYPE\n"); }
 "uint128"       { printf("UINT128_TYPE\n"); }
+
 "float2"        { printf("FLOAT2_TYPE\n"); }
 "float4"        { printf("FLOAT4_TYPE\n"); }
 "float8"        { printf("FLOAT8_TYPE\n"); }
@@ -93,7 +101,7 @@ ID       [a-zA-Z_][a-zA-Z0-9_]*
 "ufloat64"      { printf("UFLOAT64_TYPE\n"); }
 "ufloat128"     { printf("UFLOAT128_TYPE\n"); }
 
-{INT}           { printf("INTEGER: %s\n", yytext); }
+º{INT}           { printf("INTEGER: %s\n", yytext); }
 {FLOAT}         { printf("FLOAT: %s\n", yytext); }
 {ID}            { printf("IDENTIFIER: %s\n", yytext); }
 [ \t\n]         ;  /* Ignore whitespace */
